@@ -4,7 +4,6 @@ class Solution {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         // Map to store the next greater element for each number in nums2
         Map<Integer, Integer> nextGreaterMap = new HashMap<>();
-        // Stack to help find next greater elements
         Stack<Integer> stack = new Stack<>();
 
         // Traverse nums2 to fill the map
@@ -28,19 +27,4 @@ class Solution {
 
         return result;
     }
-
-    // Optional: main method for local testing
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-        int[] nums1 = {4, 1, 2};
-        int[] nums2 = {1, 3, 4, 2};
-        System.out.println(Arrays.toString(sol.nextGreaterElement(nums1, nums2)));
-        // Output: [-1, 3, -1]
-
-        int[] nums3 = {2, 4};
-        int[] nums4 = {1, 2, 3, 4};
-        System.out.println(Arrays.toString(sol.nextGreaterElement(nums3, nums4)));
-        // Output: [3, -1]
-    }
 }
-
